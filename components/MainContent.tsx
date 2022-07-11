@@ -35,7 +35,6 @@ function MainContent() {
           console.log("Something is wrong! ", err));
       }
     }, [playlistId, spotifyApi])
-    console.log(playlist);
     return (
     <div className='flex-grow h-screen overflow-y-scroll scrollbar-hide'>
         <header className='absolute top-5 right-8'>

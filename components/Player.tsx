@@ -1,4 +1,4 @@
-import {  HeartIcon, VolumeUpIcon as VolumeDownIcon } from '@heroicons/react/outline';
+import {  HeartIcon, ReplyIcon, VolumeUpIcon as VolumeDownIcon } from '@heroicons/react/outline';
 import { RewindIcon, FastForwardIcon, PauseIcon, PlayIcon, VolumeUpIcon, SwitchHorizontalIcon } from '@heroicons/react/solid'
 import { debounce } from 'lodash';
 import { useSession } from 'next-auth/react';
@@ -19,7 +19,6 @@ function Player() {
     const fetchCurrentSongInfo = () => {
         if(!songInfo) {
             spotifyApi.getMyCurrentPlayingTrack().then((data) => {
-                console.log("Now Playing: ", data.body?.item);
                 setCurrentTrackId(data.body?.item?.id);
                 spotifyApi.getMyCurrentPlaybackState().then((data) => {
                     setIsPlaying(data.body?.is_playing);
@@ -82,7 +81,7 @@ function Player() {
             <FastForwardIcon className='button'
             //onClick = {Skip to Next}; Api call is not working
             />
-            <RewindIcon className="button "/>
+            <ReplyIcon className="button "/>
         </div>
         <div className="flex items-center space-x-3 md:space-x-4 justify-end pr-5">
             <VolumeDownIcon className='button' onClick={() => volume > 0 && setVolume(volume-10)}/>

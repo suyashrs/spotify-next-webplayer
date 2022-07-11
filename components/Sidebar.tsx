@@ -20,8 +20,6 @@ function sidebar() {
     }
   }, [session, spotifyApi]);
 
-  console.log("Current Playlist: ", playlistId);
-
   return (
     <div className="text-gray-500 p-5 text-xs lg:text-sm 
     border-r border-gray-900 
