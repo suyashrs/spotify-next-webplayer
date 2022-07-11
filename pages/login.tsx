@@ -12,7 +12,6 @@ function LoginPage({providers}: {providers: InferGetServerSidePropsType<typeof g
             <button
               className="bg-[#18d860] text-white p-5 rounded-full mt-4"
               onClick={() => {
-                // https://developer.spotify.com/dashboard/applications/0e3eff139050415a9635bc8e4394622a
                 // Spotify settings redirect uris: http://localhost:3000/api/auth/callback/spotify
                 signIn(provider.id, {callbackUrl: '/'});
               }}
