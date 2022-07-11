@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import { getSession, GetSessionParams } from 'next-auth/react'
 import Head from 'next/head'
 import MainContent from '../components/MainContent'
-import Center from '../components/MainContent'
 import Player from '../components/Player'
 import Sidebar from '../components/Sidebar'
 
